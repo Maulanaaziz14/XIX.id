@@ -1,3 +1,22 @@
+// sebelum masuk web
+document.addEventListener("DOMContentLoaded", function () {
+    const loader = document.querySelector(".loader");
+
+    setTimeout(() => {
+        loader.classList.add("hidden");
+        document.body.classList.add("loaded")
+    }, 4000); // Loader hilang setelah 4 detik
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth', block: 'start'
+        });
+    });
+});
+// ===============================================================================
 document.addEventListener("DOMContentLoaded", function () {
     console.log("DOM Loaded. Initializing Swiper...");
 
