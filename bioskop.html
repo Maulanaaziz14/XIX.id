@@ -1,0 +1,128 @@
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XXI Babelan - Pemesanan Tiket</title>
+  <link rel="stylesheet" href="bioskop.css">
+</head>
+<body>
+
+  <header>
+    <h1>XIX</h1>
+  </header>
+
+  <main>
+
+    <!-- Pilih Film -->
+    <section id="film-selection">
+        <h2>Pilih Film</h2>
+        <div class="pilih-film">
+          <select id="film">
+            <option value="silahkan-pilih">Pilih film disini</option>
+            <option value="aku-jati">Aku Jati, Aku Asperger</option>
+            <option value="venom">Venom: The Last Dance</option>
+            <option value="kuasa-gelap">Kuasa Gelap</option>
+            <option value="wild-robot">The Wild Robot</option>
+          </select>
+        </div>
+        <div class="film-container">
+          <div class="card" data-film="aku-jati" data-image="aku-jati">
+            <div class="card-inner">
+              <div class="card-front">
+                <div class="aku-jati">aku jati</div>
+              </div>
+              <div class="card-back">
+                <video controls>
+                  <source src="aku-jati-asperger.mp4" type="video/mp4">
+                  <iframe src="" frameborder="0" allowfullscreen></iframe>
+                </video>
+              </div>
+            </div>
+          </div>
+      
+          <div class="card" data-film="venom" data-image="venom-card">
+            <div class="card-inner">
+              <div class="card-front">
+                <div class="venom-card">venom</div>
+              </div>
+              <div class="card-back">
+                <video controls>
+                  <source src="venom.mp4" type="video/mp4">
+                  <iframe src="" frameborder="0" allowfullscreen></iframe>
+                </video>
+              </div>
+            </div>
+          </div>
+      
+          <div class="card" data-film="kuasa-gelap" data-image="kuasa-card">
+            <div class="card-inner">
+              <div class="card-front">
+                <div class="kuasa-card">Kuasa Gelap</div>
+              </div>
+              <div class="card-back">
+                <video controls>
+                  <source src="kuasa-gelap.mp4" type="video/mp4">
+                  <iframe src="" frameborder="0" allowfullscreen></iframe>
+                </video>
+              </div>
+            </div>
+          </div>
+      
+          <div class="card" data-film="wild-robot" data-image="wild-card">
+            <div class="card-inner">
+              <div class="card-front">
+                <div class="wild-card">The Wild Robot
+                </div>
+              </div>
+              <div class="card-back">
+                <video controls>
+                  <source src="the-wild.mp4" type="video/mp4">
+                  <iframe src="" frameborder="0" allowfullscreen></iframe>
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- Pilih Kursi -->
+    <section id="seat-selection">
+      <h2>Pilih Kursi</h2>
+      <div id="seats-container"></div>
+    </section>
+
+    <!-- Pilih Paket Makanan -->
+    <section id="package-selection">
+        <h2>Pilih Paket Makanan & Minuman</h2>
+        <div class="package-container">
+            <div class="package" data-price="30000">
+                <img src="paket-popcorn.jpg" alt="Popcorn & Soda" width="100">
+                <p>Popcorn & Soda</p>
+            </div>
+            <div class="package" data-price="25000">
+                <img src="paket_popcorn_dan_milo.jpg" alt="Popcorn & Milo" width="100">
+                <p>Popcorn & Milo</p>
+            </div>
+            <div class="package" data-price="20000">
+                <img src="paket_burger_dan_cola.jpg" alt="Burger & Cola" width="100">
+                <p>Burger & Cola</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="summary">
+    <div>
+        <p>Film: <span id="selected-film">-</span></p>
+        <p>Kursi: <span id="selected-seats">-</span></p>
+        <p>Paket: <span id="selected-package">-</span></p>
+        <p>Total Harga: <span id="total-price">Rp 0</span></p>
+      </div>
+      
+      <!-- Tombol Konfirmasi -->
+      <button id="confirm-button">Pesan Tiket</button>
+    </section>
+  </main>
+
+  <script src="bioskop.js"></script>
+</body>
+</html>
