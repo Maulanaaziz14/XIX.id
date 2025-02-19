@@ -321,8 +321,12 @@ transition: ease-in 0.5s;
   text-align: left;
 }
 
-#receipt h2 {
+#receipt h2, p {
   text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+#receipt p{
+  font-size: 1.03rem;
 }
 
 button {
