@@ -186,8 +186,8 @@ border-radius: 8px;
     gap: 10pxpx;
   }
   .card{
-    width: 175px;
-  
+    width: 160px;
+    height: 250px;
   }
   .seat {
     width: 25px;
