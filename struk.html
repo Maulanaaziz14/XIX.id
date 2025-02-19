@@ -6,6 +6,20 @@
     <title>Struk Pemesanan</title>
     <link rel="stylesheet" href="bioskop.css">
 </head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script>
+  document.getElementById("print-button").addEventListener("click", function () {
+    let receipt = document.getElementById("receipt"); // Ambil elemen struk
+
+    html2canvas(receipt, { scale: 2 }).then(canvas => {
+      let imgData = canvas.toDataURL("image/jpeg"); // Ubah ke JPG
+      let link = document.createElement("a");
+      link.href = imgData;
+      link.download = "Struk_Pemesanan.jpg"; // Nama file yang didownload
+      link.click();
+    });
+  });
+</script>
 <body>
 
     <header>
@@ -19,6 +33,8 @@
             <p><strong>Kursi:</strong> <span id="seat-numbers"></span></p>
             <p><strong>Paket Makanan:</strong> <span id="package-name"></span></p>
             <p><strong>Total Harga:</strong> <span id="total-price"></span></p>
+            <p class="peh"><strong>SELAMAT MENONTON <br> +========================+</strong></p>
+            <p class="watermark">XIX.id</p>
         </section>
 
         <button onclick="window.print()">Cetak Struk</button>
@@ -33,6 +49,7 @@
             document.getElementById("seat-numbers").textContent = orderData.seats.join(", ");
             document.getElementById("package-name").textContent = orderData.package;
             document.getElementById("total-price").textContent = "Rp " + orderData.totalPrice.toLocaleString();
+            
         }
     </script>
 
