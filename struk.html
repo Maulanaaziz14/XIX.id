@@ -42,10 +42,10 @@
             let receiptElement = document.getElementById("receipt"); // Ambil elemen struk
 
             html2canvas(receiptElement, { scale: 2 }).then(canvas => {
-                let imgData = canvas.toDataURL("image/jpeg", 1.0); // Konversi ke JPG
+                let imgData = canvas.toDataURL("image/jpg", 1.0); // Konversi ke JPG
                 let link = document.createElement("a");
                 link.href = imgData;
-                link.download = "struk_Pemesanan_Tiket_Bioskop.jpeg"; // Nama file saat diunduh
+                link.download = "struk_Pemesanan_Tiket_Bioskop.jpg"; // Nama file saat diunduh
                 link.click();
             });
         });
